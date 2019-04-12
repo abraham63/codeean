@@ -15,7 +15,6 @@
     global $woocommerce, $post;
     $produit = new WC_Product(get_the_ID());
     echo '<div id="ean_code" class="options_group">';
-    //add GTIN field for simple product
     woocommerce_wp_text_input(
        array(
           'id' => '_cean',
@@ -25,8 +24,6 @@
     );
     echo '</div>';
  }
-
-
 
  //SAVE THE FIELD IN POST META
  add_action('woocommerce_process_product_meta','save_ean_field');
